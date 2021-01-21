@@ -18,8 +18,8 @@ import { EmailModule } from './modules/email/email.module';
           port: 25,
           secure: false, // upgrade later with STARTTLS
           auth: {
-            user: "df@changes.hk",
-            pass: "jiakr1995",
+            user: "testmail@changes.hk",
+            pass: "Jiakr1995",
           },
         },
         defaults: {
