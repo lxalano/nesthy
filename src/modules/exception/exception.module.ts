@@ -4,9 +4,7 @@ import { Module } from '@nestjs/common';
 
 @Module({
     imports: [],
-    controllers: [
-        ExceptionController,],
-    providers: [
-        ExceptionService,],
+    controllers: [ExceptionController],
+    providers: [ExceptionService],
 })
 export class ExceptionModule { }

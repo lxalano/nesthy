@@ -1,3 +1,4 @@
+import { RoleGuardModule } from './modules/role-guard/role-guard.module';
 import { ExceptionModule } from './modules/exception/exception.module';
 import { MiddlewareConsumer, Module, Patch, RequestMethod } from '@nestjs/common';
 import { HelloModule } from './modules/hello/hello.module';
@@ -6,6 +7,7 @@ import { LoggerMiddleware } from './common/middleware/logger.middleware';
 
 @Module({
   imports: [
+    RoleGuardModule,
     ExceptionModule, HelloModule],
 })
 
