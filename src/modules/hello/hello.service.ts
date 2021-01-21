@@ -11,6 +11,7 @@ export class HelloService {
     update(id: string, message: string): string {
         return `Set Hello Done.(${id}:${message})`;
     }
-
-
+    remove(id: number): string {
+        return `${id}已经删除`
+    }
 }
