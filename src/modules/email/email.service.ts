@@ -11,7 +11,8 @@ export class EmailService {
             //发送测试邮件，使用的可能不是视频教程的组件
             subject: '每一天都有自己爱自己√',
             //需要使用Html模板
-            template: 'welcome',
+            html: '<b>你好啊</b>'
+            // template: 'welcome',
         })
     }
 }
