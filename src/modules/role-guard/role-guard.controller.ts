@@ -1,6 +1,6 @@
 
 import { Controller, Get, Query, UseGuards } from '@nestjs/common';
-import { Roles } from 'src/common/decorators/roles.decortor';
+import { Roles } from '../../common/decorators/roles.decortor';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { RoleGuardService } from './role-guard.service';
 
@@ -12,8 +12,8 @@ export class RoleGuardController {
 
     @Get()
     @Roles('admin')
-    feturn(@Query() { id }): string {
-        return this.roleGuardService.fetch(id);
+    feturn(@Query() { user }): string {
+        return this.roleGuardService.fetch(user);
 
     }
 
