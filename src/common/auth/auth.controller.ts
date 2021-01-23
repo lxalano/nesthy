@@ -1,4 +1,22 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post, UseGuards } from '@nestjs/common';
+import { AuthService } from './auth.service';
+import { AuthGuard } from '@nestjs/passport';
+
 
 @Controller()
-export class AuthController {}
+export class AuthController {
+    constructor(private readonly authService: AuthService) { }
+
+    //登陆测试
+    @UseGuards(AuthGuard('local'))
+    @Post('auth/login')
+    async login(@Request() req) {
+
+
+    }
+
+
+
+
+}
+
