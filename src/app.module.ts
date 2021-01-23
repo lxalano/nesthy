@@ -1,3 +1,4 @@
+import { AuthModule } from './common/auth/auth.module';
 import * as path from 'path';
 import { RoleGuardModule } from './modules/role-guard/role-guard.module';
 import { ExceptionModule } from './modules/exception/exception.module';
@@ -11,6 +12,7 @@ import { EmailModule } from './modules/email/email.module';
 
 @Module({
   imports: [
+    AuthModule,
     MailerModule.forRootAsync({
       useFactory: () => ({
         transport: {
